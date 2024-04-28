@@ -51,7 +51,7 @@ Portfolio cá nhân của tôi bao gồm sáu trang chính được thiết kế
 
 1. Clone repository này về máy tính của bạn: [https://github.com/NgoTanLoi01/ngotanloi-professional-profile.git](https://github.com/NgoTanLoi01/ngotanloi-professional-profile.git)
 2. Mở file `index.html` trong trình duyệt web của bạn để bắt đầu khám phá.
-
+3. Demo [http://ngotanloidev.somee.com/)
 ## Tài Nguyên
 
 - **Bootstrap**: Sử dụng framework Bootstrap để tạo giao diện đẹp và đáp ứng.
