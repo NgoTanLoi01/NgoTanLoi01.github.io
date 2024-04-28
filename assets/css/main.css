@@ -3456,7 +3456,7 @@ textarea:focus::placeholder {
   color: #e12a72;
 }
 .portfolio-modal-box .modal-dialog .modal-content .modal-body .h1-modal-img {
-  border-radius: 15px;
+
   overflow: hidden;
   margin-bottom: 20px;
 }
