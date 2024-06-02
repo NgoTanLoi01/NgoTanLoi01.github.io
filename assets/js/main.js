@@ -1,208 +1,429 @@
+/*-----------------------------------------------------------------------------------
+
+Theme Name: Gerold - Personal Portfolio HTML5 Template
+Theme URI: https://themejunction.net/html/gerold/demo/
+Author: Theme-Junction
+Author URI: https://themeforest.net/user/theme-junction
+Description: Gerold - Personal Portfolio HTML5 Template
+
+-----------------------------------------------------------------------------------
+
+/***************************************************
+==================== JS INDEX ======================
+****************************************************
+// Data js
+// Sidebar Navigation
+// Sticky Header
+// Hamburger Menu
+// Scroll To Section
+// OnePage Active Class
+// Portfolio Filter
+// Portfolio Gallery Carousel
+// Testimonial Carousel
+// Nice Select
+// ALL Popup
+// Preloader
+// Sidebar Hover BG Color
+// Services Hover BG
+// Portfolio Filter BG Color
+// Funfact
+// WoW Js
+
+****************************************************/
+
 (function ($) {
-  "use strict";
+	"use strict";
 
-  // preloader start
-  let preloader = document.querySelector("#preloader");
-  window.addEventListener("load", function () {
-    preloader.classList.add("preloaded");
-    setTimeout(function () {
-      preloader.remove();
-    }, 1500);
-  });
-  // preloader end
+	/*------------------------------------------------------
+  /  Data js
+  /------------------------------------------------------*/
+	$("[data-bg-image]").each(function () {
+		$(this).css(
+			"background-image",
+			"url(" + $(this).attr("data-bg-image") + ")"
+		);
+	});
 
-  // meanmenu start
-  $(".main_menu").meanmenu({
-    meanMenuContainer: ".mobile_menu",
-    meanScreenWidth: "1399",
-  });
+	$("[data-bg-color]").each(function () {
+		$(this).css("background-color", $(this).attr("data-bg-color"));
+	});
 
-  $(".main_menu_2").meanmenu({
-    meanMenuContainer: ".mobile_menu_2",
-    meanScreenWidth: "991",
-  });
+	$(document).ready(function ($) {
+		/*------------------------------------------------------
+  	/  Sticky Header
+  	/------------------------------------------------------*/
+		var lastScrollTop = 0;
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
 
-  $(".main_menu_3").meanmenu({
-    meanMenuContainer: ".mobile_menu_3",
-    meanScreenWidth: "991",
-  });
-  // meanmenu end
+			if (scroll > 300) {
+				$(".tj-header-area.header-sticky").addClass("sticky");
+				$(".tj-header-area.header-sticky").removeClass("sticky-out");
+			} else if (scroll < lastScrollTop) {
+				if (scroll < 500) {
+					$(".tj-header-area.header-sticky").addClass("sticky-out");
+					$(".tj-header-area.header-sticky").removeClass("sticky");
+				}
+			} else {
+				$(".tj-header-area.header-sticky").removeClass("sticky");
+			}
 
-  // mobile menu start
-  let menutoggole = document.querySelector(".toggle_menu");
-  let mobilemenu = document.querySelector(".mobile-menu");
-  menutoggole.onclick = function () {
-    menutoggole.classList.toggle("active");
-    mobilemenu.classList.toggle("active");
-  };
-  // mobile menu end
+			lastScrollTop = scroll;
+		});
 
-  // dark mood start
-  var darktoggle = document.querySelector(".dark-btn-icon");
-  var home1bgimg = document.querySelector(".page-wrapper");
-  var home2bgimg = document.querySelector(".page-wrapper-2");
+		/*------------------------------------------------------
+  	/  Hamburger Menu
+  	/------------------------------------------------------*/
+		$(".menu-bar").on("click", function () {
+			$(".menu-bar").toggleClass("menu-bar-toggeled");
+			$(".header-menu").toggleClass("opened");
+			$("body").toggleClass("overflow-hidden");
+		});
 
-  // Function to toggle the dark theme
-  function toggleDarkTheme() {
-    // Toggle the class on the body element
-    $("body").toggleClass("dark-theme");
+		$(".header-menu ul li a").on("click", function () {
+			$(".menu-bar").removeClass("menu-bar-toggeled");
+			$(".header-menu").removeClass("opened");
+			$("body").removeClass("overflow-hidden");
+		});
 
-    // Store the preference in local storage
-    const isDarkTheme = $("body").hasClass("dark-theme");
-    localStorage.setItem("darkTheme", isDarkTheme);
+		/*------------------------------------------------------
+  	/  OnePage Active Class
+  	/------------------------------------------------------*/
+		$(".header-menu nav ul").onePageNav({
+			currentClass: "current-menu-ancestor",
+			changeHash: false,
+			easing: "swing",
+		});
 
-    if (isDarkTheme) {
-      darktoggle.src = "assets/img/icon/sun-icon.png";
-      home1bgimg.style.backgroundImage =
-        "url('assets/img/bg/page-bg-dark-1.jpg')";
-    } else {
-      darktoggle.src = "assets/img/icon/mon-icon.png";
-      home1bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
-      home2bgimg.style.backgroundImage = "url('assets/img/bg/page-bg-1.jpg')";
-    }
-  }
-  // Check if the user preference is already stored in local storage
-  $(document).ready(function () {
-    const isDarkTheme = localStorage.getItem("darkTheme") === "true";
+		/*------------------------------------------------------
+  	/  Portfolio Filter
+  	/------------------------------------------------------*/
+		$(".portfolio-box").imagesLoaded(function () {
+			var $grid = $(".portfolio-box").isotope({
+				// options
+				masonry: {
+					columnWidth: ".portfolio-box .portfolio-sizer",
+					gutter: ".portfolio-box .gutter-sizer",
+				},
+				itemSelector: ".portfolio-box .portfolio-item",
+				percentPosition: true,
+			});
 
-    // Apply the dark theme if the preference is set to true
-    if (isDarkTheme) {
-      $("body").addClass("dark-theme");
-      darktoggle.src = "assets/img/icon/sun-icon.png";
-      home1bgimg.style.backgroundImage =
-        "url('assets/img/bg/page-bg-dark-1.jpg')";
-    }
+			// filter items on button click
+			$(".filter-button-group").on("click", "button", function () {
+				$(".filter-button-group button").removeClass("active");
+				$(this).addClass("active");
 
-    // Attach click event to the specified div
-    $(".dark-btn").on("click", toggleDarkTheme);
-  });
-  // dark mood end
+				var filterValue = $(this).attr("data-filter");
+				$grid.isotope({ filter: filterValue });
+			});
+		});
 
-  //  client slider start
-  if (jQuery(".client_slide_active").length > 0) {
-    let acooterbrand = new Swiper(".client_slide_active", {
-      slidesPerView: 4,
-      loop: true,
-      rtl: false,
-      infinite: true,
-      autoplay: {
-        delay: 4000,
-      },
+		/*------------------------------------------------------
+  	/  Portfolio Gallery Carousel
+  	/------------------------------------------------------*/
+		$(".portfolio_gallery.owl-carousel").owlCarousel({
+			items: 2,
+			loop: true,
+			lazyLoad: true,
+			center: true,
+			// autoWidth: true,
+			autoplayHoverPause: true,
+			autoplay: false,
+			autoplayTimeout: 5000,
+			smartSpeed: 800,
+			margin: 30,
+			nav: false,
+			dots: true,
+			responsive: {
+				// breakpoint from 0 up
+				0: {
+					items: 1,
+					margin: 0,
+				},
+				// breakpoint from 768 up
+				768: {
+					items: 2,
+					margin: 20,
+				},
+				992: {
+					items: 2,
+					margin: 30,
+				},
+			},
+		});
 
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-        },
-        480: {
-          slidesPerView: 2,
-        },
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        992: {
-          slidesPerView: 4,
-        },
-        1200: {
-          slidesPerView: 5,
-        },
-      },
-    });
-  }
-  // client slider end
+		/*------------------------------------------------------
+  	/ Testimonial Carousel
+  	/------------------------------------------------------*/
+		$(".testimonial-carousel.owl-carousel").owlCarousel({
+			loop: true,
+			margin: 30,
+			nav: false,
+			dots: true,
+			autoplay: false,
+			active: true,
+			smartSpeed: 1000,
+			autoplayTimeout: 7000,
+			responsive: {
+				0: {
+					items: 1,
+				},
+				600: {
+					items: 2,
+				},
+				1000: {
+					items: 2,
+				},
+			},
+		});
 
-  // portfolio fillter start
-  function enableMasonry2() {
-    // ----------------------------- isotop gallery
+		/*------------------------------------------------------
+  	/ Post Gallery Carousel
+  	/------------------------------------------------------*/
+		$(".tj-post__gallery.owl-carousel").owlCarousel({
+			items: 1,
+			loop: true,
+			margin: 30,
+			dots: false,
+			nav: true,
+			navText: [
+				'<i class="fal fa-arrow-left"></i>',
+				'<i class="fal fa-arrow-right"></i>',
+			],
+			autoplay: false,
+			smartSpeed: 1000,
+			autoplayTimeout: 3000,
+		});
+		/*------------------------------------------------------
+  	/ Brand Slider
+  	/------------------------------------------------------*/
+		if ($(".brand-slider").length > 0) {
+			var brand = new Swiper(".brand-slider", {
+				slidesPerView: 6,
+				spaceBetween: 30,
+				loop: false,
+				breakpoints: {
+					320: {
+						slidesPerView: 2,
+					},
+					576: {
+						slidesPerView: 3,
+					},
+					640: {
+						slidesPerView: 3,
+					},
+					768: {
+						slidesPerView: 4,
+					},
+					992: {
+						slidesPerView: 5,
+					},
+					1024: {
+						slidesPerView: 6,
+					},
+				},
+			});
+		}
 
-    $(window).on("load", function () {
-      if ($("#fillter-item-active").length) {
-        var $grid = $("#fillter-item-active").isotope({
-          // options
-          itemSelector: ".isotop-item",
-          percentPosition: true,
-          masonry: {
-            // use element for option
-            columnWidth: ".grid-sizer",
-          },
-        });
+		/*------------------------------------------------------
+  	/  Nice Select
+  	/------------------------------------------------------*/
+		$("select").niceSelect();
 
-        // filter items on button click
-        $(".isotop-menu-wrapper").on("click", "li", function () {
-          var filterValue = $(this).attr("data-filter");
-          $grid.isotope({ filter: filterValue });
-        });
+		/*------------------------------------------------------
+  	/  ALL Popup
+  	/------------------------------------------------------*/
+		if ($(".popup_video").length > 0) {
+			$(`.popup_video`).lightcase({
+				transition: "elastic",
+				showSequenceInfo: false,
+				slideshow: false,
+				swipe: true,
+				showTitle: false,
+				showCaption: false,
+				controls: true,
+			});
+		}
 
-        // change is-checked class on buttons
-        $(".isotop-menu-wrapper").each(function (i, buttonGroup) {
-          var $buttonGroup = $(buttonGroup);
-          $buttonGroup.on("click", "li", function () {
-            $buttonGroup.find(".is-checked").removeClass("is-checked");
-            $(this).addClass("is-checked");
-          });
-        });
-      }
-    });
-  }
+		$(".modal-popup").magnificPopup({
+			type: "inline",
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: "auto",
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: "popup-mfp",
+		});
+	});
 
-  enableMasonry2();
-  // portfolio filter end
+	$(window).on("load", function () {
+		/*------------------------------------------------------
+  	/  WoW Js
+  	/------------------------------------------------------*/
+		var wow = new WOW({
+			boxClass: "wow", // default
+			animateClass: "animated", // default
+			offset: 100, // default
+			mobile: true, // default
+			live: true, // default
+		});
+		wow.init();
 
-  // blog slider start
-  if (jQuery(".blog-slider-active").length > 0) {
-    let acooterbrand = new Swiper(".blog-slider-active", {
-      slidesPerView: 1,
-      loop: true,
-      rtl: false,
-      infinite: true,
-      autoplay: false,
-      pagination: {
-        el: ".blog-progation",
-        clickable: true,
-      },
-    });
-  }
-  // blog slider end
+		/*------------------------------------------------------
+  	/  Preloader
+  	/------------------------------------------------------*/
+		const svg = document.getElementById("preloaderSvg");
+		const svgText = document.querySelector(
+			".hero-section .intro_text svg text"
+		);
+		const tl = gsap.timeline({
+			onComplete: startStrokeAnimation,
+		});
+		const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+		const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-  // contact form
-  $(".input-box.name").click(function () {
-    $(".input-box.name").addClass("height");
-    $(".input-box.name").css("borderBottom", "1px solid #FE7878");
-    $(".input-lebel.name").css("color", "#FE7878");
-  });
+		tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+			delay: 1.5,
+			y: -100,
+			opacity: 0,
+		});
+		tl.to(svg, {
+			duration: 0.5,
+			attr: { d: curve },
+			ease: "power2.easeIn",
+		}).to(svg, {
+			duration: 0.5,
+			attr: { d: flat },
+			ease: "power2.easeOut",
+		});
+		tl.to(".preloader", {
+			y: -1500,
+		});
+		tl.to(".preloader", {
+			zIndex: -1,
+			display: "none",
+		});
 
-  $(".input-box.gmail").click(function () {
-    $(".input-box.gmail").addClass("height");
-    $(".input-box.gmail").css("borderBottom", "1px solid #1B74E4");
-    $(".input-lebel.gmail").css("color", "#1B74E4");
-  });
+		function startStrokeAnimation() {
+			// Add a class or directly apply styles to trigger the stroke animation
+			svgText.classList.add("animate-stroke");
+		}
 
-  $(".input-box.message").click(function () {
-    $(".input-box.message").addClass("height");
-    $(".input-box.message").css("borderBottom", "1px solid #CE65F3");
-    $(".input-lebel.message").css("color", "#CE65F3");
-  });
-  // contact form end
+		/*------------------------------------------------------
+  	/  Services Hover BG
+  	/------------------------------------------------------*/
+		function service_animation() {
+			var active_bg = $(".services-widget .active-bg");
+			var element = $(".services-widget .current");
+			$(".services-widget .service-item").on("mouseenter", function () {
+				var e = $(this);
+				activeService(active_bg, e);
+			});
+			$(".services-widget").on("mouseleave", function () {
+				element = $(".services-widget .current");
+				activeService(active_bg, element);
+				element.closest(".service-item").siblings().removeClass("mleave");
+			});
+			activeService(active_bg, element);
+		}
+		service_animation();
 
-  // data background
-  $("[data-background]").each(function () {
-    $(this).css(
-      "background-image",
-      "url(" + $(this).attr("data-background") + ") "
-    );
-  });
+		function activeService(active_bg, e) {
+			if (!e.length) {
+				return false;
+			}
+			var topOff = e.offset().top;
+			var height = e.outerHeight();
+			var menuTop = $(".services-widget").offset().top;
+			e.closest(".service-item").removeClass("mleave");
+			e.closest(".service-item").siblings().addClass("mleave");
+			active_bg.css({ top: topOff - menuTop + "px", height: height + "px" });
+		}
 
-  //   odometer
-  $(".odometer").appear(function (e) {
-    var odo = $(".odometer");
-    odo.each(function () {
-      var countNumber = $(this).attr("data-count");
-      $(this).html(countNumber);
-    });
-  });
+		$(".services-widget .service-item").on("click", function () {
+			$(".services-widget .service-item").removeClass("current");
+			$(this).addClass("current");
+		});
 
-  // WOW active
-  new WOW().init();
+		/*------------------------------------------------------
+  	/  Portfolio Filter BG Color
+  	/------------------------------------------------------*/
+		function filter_animation() {
+			var active_bg = $(".portfolio-filter .button-group .active-bg");
+			var element = $(".portfolio-filter .button-group .active");
+			$(".portfolio-filter .button-group button").on("click", function () {
+				var e = $(this);
+				activeFilterBtn(active_bg, e);
+			});
+			activeFilterBtn(active_bg, element);
+		}
+		filter_animation();
+
+		function activeFilterBtn(active_bg, e) {
+			if (!e.length) {
+				return false;
+			}
+			var leftOff = e.offset().left;
+			var width = e.outerWidth();
+			var menuLeft = $(".portfolio-filter .button-group").offset().left;
+			e.siblings().removeClass("active");
+			e.closest("button")
+				.siblings()
+				.addClass(".portfolio-filter .button-group");
+			active_bg.css({ left: leftOff - menuLeft + "px", width: width + "px" });
+		}
+
+		/*------------------------------------------------------
+  	/  Funfact
+  	/------------------------------------------------------*/
+		if ($(".odometer").length > 0) {
+			$(".odometer").appear(function () {
+				var odo = $(".odometer");
+				odo.each(function () {
+					var countNumber = $(this).attr("data-count");
+					$(this).html(countNumber);
+				});
+			});
+		}
+
+		// Form Validation
+		/* contact form */
+		if ($("#contact-form").length > 0) {
+			$("#contact-form").validate({
+				rules: {
+					conName: "required",
+					conEmail: {
+						required: true,
+						email: true,
+					},
+				},
+
+				messages: {
+					conName: "Enter your name.",
+					conEmail: "Enter a valid email.",
+				},
+				submitHandler: function (form) {
+					// start ajax request
+					$.ajax({
+						type: "POST",
+						url: "assets/mail/contact-form.php",
+						data: $("#contact-form").serialize(),
+						cache: false,
+						success: function (data) {
+							if (data == "Y") {
+								$("#message_sent").modal("show");
+								$("#contact-form").trigger("reset");
+							} else {
+								$("#message_fail").modal("show");
+							}
+						},
+					});
+				},
+			});
+		}
+		/* !contact form */
+	});
 })(jQuery);
