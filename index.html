@@ -1,1274 +1,585 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en" class="no-js">
 
 <head>
-   <meta charset="utf-8" />
-   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NgoTanLoi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="shortcut icon" href="img/favicon.png">
 
-   <!-- Site Title -->
-   <title> NgoTanLoi - DEV </title>
 
-   <!-- Place favicon.ico in the root directory -->
-   <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-   <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+  <link rel="stylesheet" href="css/animations.css" type="text/css">
+  <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-   <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/animate.min.css" />
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-   <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
-   <link rel="stylesheet" href="assets/css/flaticon_gerold.css" />
-   <link rel="stylesheet" href="assets/css/nice-select.css" />
-   <link rel="stylesheet" href="assets/css/backToTop.css" />
-   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-   <link rel="stylesheet" href="assets/css/swiper.min.css" />
-   <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
-   <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-   <link rel="stylesheet" href="assets/css/main.css" />
-   <link rel="stylesheet" href="assets/css/light-mode.css" />
-   <link rel="stylesheet" href="assets/css/responsive.css" />
-   <style>
-      .gallery_item img {
-         border: 5px solid #6036b3;
-      }
-   </style>
+  <script src="js/modernizr.custom.js"></script>
 </head>
 
-<body class="light-mode">
-   <!-- Preloader Area Start -->
-   <!-- <div class="preloader">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-      </svg>
+<body>
+  <!-- Animated Background -->
+  <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+  <!-- /Animated Background -->
 
-      <div class="preloader-heading">
-         <div class="load-text">
-            <span>L</span>
-            <span>o</span>
-            <span>a</span>
-            <span>d</span>
-            <span>i</span>
-            <span>n</span>
-            <span>g</span>
-         </div>
+  <!-- Loading animation -->
+  <div class="preloader">
+    <div class="preloader-animation">
+      <div class="preloader-spinner">
       </div>
-   </div> -->
-   <!-- Preloader Area End -->
+    </div>
+  </div>
+  <!-- /Loading animation -->
 
-   <!-- start: Back To Top -->
-   <div class="progress-wrap" id="scrollUp">
-      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
-   </div>
-   <!-- end: Back To Top -->
+  <div class="page">
+    <div class="page-content">
 
-   <!-- HEADER START -->
-   <header class="tj-header-area header-absolute">
-      <div class="container">
-         <div class="row">
-            <div class="col-12 d-flex flex-wrap align-items-center">
-               <div class="logo-box">
-                  <a href="index.html">
-                     <img src="assets/img/logo/logo-dark.png" alt="" />
-                  </a>
-               </div>
+      <header id="site_header" class="header mobile-menu-hide">
+        <div class="header-content">
+          <div class="header-photo">
+            <img src="img/main_photo.jpg" alt="Alex Smith">
+          </div>
+          <div class="header-titles">
+            <h2>Ngo Tan Loi</h2>
+            <h4>A software engineer</h4>
+          </div>
+        </div>
 
-               <div class="header-info-list d-none d-md-inline-block">
-                  <ul class="ul-reset">
-                     <li><a href="mailto:ngotanloi2424@gmail.com">ngotanloi2424@gmail.com</a></li>
-                  </ul>
-               </div>
+        <ul class="main-menu">
+          <li class="active">
+            <a href="#home" class="nav-anim">
+              <span class="menu-icon lnr lnr-home"></span>
+              <span class="link-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about-me" class="nav-anim">
+              <span class="menu-icon lnr lnr-user"></span>
+              <span class="link-text">About Me</span>
+            </a>
+          </li>
+          <li>
+            <a href="#resume" class="nav-anim">
+              <span class="menu-icon lnr lnr-graduation-hat"></span>
+              <span class="link-text">Resume</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-anim">
+              <span class="menu-icon lnr lnr-envelope"></span>
+              <span class="link-text">Contact</span>
+            </a>
+          </li>
+        </ul>
 
-               <div class="header-menu">
-                  <nav>
-                     <ul>
-                        <li><a href="#services-section">Home</a></li>
-                        <li><a href="#works-section">Project</a></li>
-                        <li><a href="#resume-section">Resume</a></li>
-                        <li><a href="#skills-section">Skills</a></li>
-                        <!-- <li><a href="#testimonials-section">Testimonials</a></li> -->
-                        <li><a href="#contact-section">Contact</a></li>
-                     </ul>
-                  </nav>
-               </div>
+        <div class="social-links">
+          <ul>
+            <li><a href="https://github.com/NgoTanLoi01" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/l%E1%BB%A3i-ng%C3%B4-t%E1%BA%A5n-b8058a2b2/" target="_blank"><i
+                  class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
 
-               <div class="header-button">
-                  <a href="#" class="btn tj-btn-primary">Hello!</a>
-               </div>
+        <div class="header-buttons">
+          <a href="https://drive.google.com/file/d/1ZYLFslCdcAIwIGddesDlw69eTbKG5T9O/view?usp=drive_link"
+            target="_blank" class="btn btn-primary">Resume</a>
+        </div>
 
-               <div class="menu-bar d-lg-none">
-                  <button>
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </button>
-               </div>
+        <div class="copyrights">© 2024 Ngo Tan Loi</div>
+      </header>
+
+      <!-- Mobile Navigation -->
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- End Mobile Navigation -->
+
+      <!-- Arrows Nav -->
+      <div class="lmpixels-arrows-nav">
+        <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
+        <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
+      </div>
+      <!-- End Arrows Nav -->
+
+      <div class="content-area">
+        <div class="animated-sections">
+          <!-- Home Subpage -->
+          <section data-id="home" class="animated-section start-page">
+            <div class="section-content vcentered">
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="title-block">
+                    <h2>Hi, I'm Loi</h2>
+                    <div class="owl-carousel text-rotation">
+                      <div class="item">
+                        <div class="sp-subtitle">A software engineer</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
-         </div>
-      </div>
-   </header>
-   <header class="tj-header-area header-2 header-sticky sticky-out">
-      <div class="container">
-         <div class="row">
-            <div class="col-12 d-flex flex-wrap align-items-center">
-               <div class="logo-box">
-                  <a href="index.html">
-                     <img src="assets/img/logo/logo-dark.png" alt="" />
-                  </a>
-               </div>
+          </section>
+          <!-- End of Home Subpage -->
 
-               <div class="header-info-list d-none d-md-inline-block">
-                  <ul class="ul-reset">
-                     <li><a href="ngotanloi2424@gmail.com">ngotanloi2424@gmail.com</a></li>
-                  </ul>
-               </div>
-
-               <div class="header-menu">
-                  <nav>
-                     <ul>
-                        <li><a href="#services-section">Home</a></li>
-                        <li><a href="#works-section">Project</a></li>
-                        <li><a href="#resume-section">Resume</a></li>
-                        <li><a href="#skills-section">Skills</a></li>
-                        <!-- <li><a href="#testimonials-section">Testimonials</a></li> -->
-                        <li><a href="#contact-section">Contact</a></li>
-                     </ul>
-                  </nav>
-               </div>
-
-               <div class="header-button">
-                  <a href="#" class="btn tj-btn-primary">Hello!</a>
-               </div>
-
-               <div class="menu-bar d-lg-none">
-                  <button>
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </button>
-               </div>
+          <!-- About Me Subpage -->
+          <section data-id="about-me" class="animated-section">
+            <div class="page-title">
+              <h2>About <span>Me</span></h2>
             </div>
-         </div>
-      </div>
-   </header>
-   <!-- HEADER END -->
 
-   <main class="site-content" id="content">
-      <!-- HERO SECTION START -->
-      <section class="hero-section d-flex align-items-center" id="intro">
-         <div class="intro_text">
-            <svg viewBox="0 0 1320 300">
-               <text x="50%" Y="50%" text-anchor="middle">HI</text>
-            </svg>
-         </div>
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-md-6">
-                  <div class="hero-content-box">
-                     <span class="hero-sub-title">I am Ngo Tan Loi</span>
-                     <h1 class="hero-title">Web Developer</h1>
+            <div class="section-content">
+              <!-- Personal Information -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-7">
+                  <p>My name is Ngo Tan Loi, and I am a software engineer based in Ho Chi Minh City. I have a deep
+                    passion for designing and developing software, with a particular focus on crafting the underlying
+                    logic that powers applications.</p>
+                </div>
+              </div>
+              <!-- End of Personal Information -->
 
-                     <div class="hero-image-box d-md-none text-center">
-                        <img src="assets/img/hero/me.png" alt="" />
-                     </div>
+              <div class="white-space-50"></div>
 
-                     <p class="lead">
-                        I am a dedicated Web Developer, committed to building comprehensive and user-centric web
-                        solutions. I transform complex ideas into meaningful digital products that enhance the online
-                        experience for everyone.
-                     </p>
-                     <div class="button-box d-flex flex-wrap align-items-center">
-                        <a href="assets/img/cv/Resume_NgoTanLoi.pdf"
-                           download="Resume_NgoTanLoi.pdf" class="btn tj-btn-secondary">Download CV <i
-                              class="flaticon-download"></i></a>
-                        <ul class="ul-reset social-icons">
-                           <li>
-                              <a href="https://github.com/NgoTanLoi01"><i class="fa-brands fa-github"></i></a>
-                           </li>
-                           <li>
-                              <a href="https://www.linkedin.com/in/ngo-tan-loi-b8058a2b2/"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                           </li>
-                           <li>
-                              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                           </li>
-                           <li>
-                              <a href="#"><i class="fa-brands fa-reddit"></i></a>
-                           </li>
+              <!-- Services -->
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="col-inner">
+                    <div class="info-list-w-icon">
+                      <div class="info-block-w-icon">
+                        <div class="ci-icon">
+                          <i class="lnr lnr-laptop-phone"></i>
+                        </div>
+                        <div class="ci-text">
+                          <h4>1+ Years of Web Design</h4>
+                          <p>Experienced web developer with 1+ years of experience in PHP and JavaScript, particularly
+                            in
+                            Laravel and React.js. Possesses strong self-learning and problem-solving abilities.
+                            Passionate
+                            about exploring and staying updated with new technologies, and actively contributing to open
+                            source projects.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="col-inner">
+                    <div class="info-list-w-icon">
+                      <div class="info-block-w-icon">
+                        <div class="ci-icon">
+                          <i class="lnr lnr-store"></i>
+                        </div>
+                        <div class="ci-text">
+                          <h4>4+ Projects Completed</h4>
+                          <p>Successfully completed over 4+ projects, demonstrating strong expertise in software
+                            development and problem-solving.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <!-- End of About Me Subpage -->
+
+          <!-- Resume Subpage -->
+          <section data-id="resume" class="animated-section">
+            <div class="page-title">
+              <h2>Resume</h2>
+            </div>
+
+            <div class="section-content">
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-9">
+
+                  <div class="block-title">
+                    <h3>Education</h3>
+                  </div>
+
+                  <div class="timeline timeline-second-style clearfix">
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2020 - 2024</h5>
+                        <span class="item-company">TRA VINH UNIVERSITY</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Information Technology</h4>
+                        <p>Academic scholarship for excellent performance</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="white-space-30"></div>
+
+                  <div class="block-title">
+                    <h3>Experience</h3>
+                  </div>
+                  <div class="timeline timeline-second-style clearfix">
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">Feb 2024 - May 2024</h5>
+                        <span class="item-company">Nguyen Trinh private enterpris</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Software Developer Intern</h4>
+                        <ul>
+                          <li>Contributed to designing and developing the user interface for a driving school website,
+                            optimizing the UI to improve user engagement by 15%.
+                          </li>
+                          <li>Spearheaded the implementation of responsive design, ensuring compatibility across various
+                            devices and screen sizes.
+                          </li>
                         </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 d-none d-md-block">
-                  <div class="hero-image-box text-center">
-                     <img src="assets/img/hero/me.png" alt="" />
-                  </div>
-               </div>
-            </div>
-
-            <div class="funfact-area">
-               <div class="row">
-                  <div class="col-6 col-lg-3">
-                     <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="1">0</span></div>
-                        <div class="text">Years of <br />Experience</div>
-                     </div>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                     <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="6">0</span>+</div>
-                        <div class="text">Project <br />Completed</div>
-                     </div>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                     <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="1">0</span></div>
-                        <div class="text">Years of <br />Experience</div>
-                     </div>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                     <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="6">0</span>+</div>
-                        <div class="text">Project <br />Completed</div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- HERO SECTION END -->
-
-      <!-- PORTFOLIO SECTION START -->
-      <section class="portfolio-section" id="works-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="section-header text-center">
-                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Recent Projects</h2>
-                  </div>
-               </div>
-            </div>
-
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
-                     <div class="button-group filter-button-group">
-                        <button data-filter="*" class="active">All</button>
-                        <button data-filter=".uxui">Website</button>
-                        <button data-filter=".mobile-app">Apps</button>
-                        <button data-filter=".branding">UX/UI</button>
-                        <div class="active-bg"></div>
-                     </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
-                     <div class="portfolio-sizer"></div>
-                     <div class="gutter-sizer"></div>
-                     <!-- project 1 -->
-                     <div class="portfolio-item uxui">
-                        <div class="image-box">
-                           <img src="assets/img/project/it-shop/trangchu_demo.png" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">IT Equipment Shop</h3>
-                           <p>A website specializing in the field of selling information technology equipment</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <!-- project 2 -->
-                     <div class="portfolio-item uxui">
-                        <div class="image-box">
-                           <img src="assets/img/project/fashion-shop/trangchu_demo.png" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Fashion Website</h3>
-                           <p>Website specializing in the field of fashion.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper2" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <!-- project 3 -->
-                     <div class="portfolio-item uxui">
-                        <div class="image-box">
-                           <img src="assets/img/project/js-ecommerce/JS_Ecommerce_demo.png" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Javascript Ecommerce</h3>
-                           <p>Use JavaScript to execute both frontend and backend projects.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper3" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <!-- project 4 -->
-                     <div class="portfolio-item mobile-app">
-                        <div class="image-box">
-                           <img src="assets/img/project/quiz-app/index.png" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Quiz App</h3>
-                           <p>A quiz application built in Javascript language</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper4" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <!-- project 5 -->
-                     <div class="portfolio-item uxui">
-                        <div class="image-box">
-                           <img src="assets/img/project/driving/driving_demo.png" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Frontend Driving School Website</h3>
-                           <p>Built for the purpose of managing the sale and import of goods.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper5" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <!-- project 6 -->
-                     <div class="portfolio-item mobile-app">
-                        <div class="image-box">
-                           <img src="assets/img/project/sales-management/Sales_management_software.png" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Sales Management Software</h3>
-                           <p>Built for the purpose of managing the sale and import of goods.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper6" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- PORTFOLIO SECTION END -->
-      <!-- =================================================================================================== -->
-      <!-- start: IT Equipment Shop -->
-      <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="">
-            <img src="assets/img/project/it-shop/trangchu.png" style="width: 100%;" alt="" />
-         </div>
+                  <div class="white-space-30"></div>
 
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">IT Equipment Shop</h2>
-                  <div class="desc">
-                     <p>A website specializing in the field of selling information technology equipment</p>
+                  <div class="block-title">
+                    <h3>Projects</h3>
                   </div>
-                  <a href="https://github.com/NgoTanLoi01/it-equipment-shop" class="btn tj-btn-primary">live preview <i
-                        class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Category</div>
-                     <div class="value">Web Design</div>
+                  <div class="timeline timeline-second-style clearfix">
+                    <!-- Prj 1 -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">April 2024- Present</h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">IT Equipment E-commerce Platform</h4>
+                        <ul>
+                          <li>An e-commerce platform for buying and selling IT equipment.</li>
+                          <li>
+                            Developed an e-commerce platform with features such as product recommendations, electronic
+                            payments, product reviews and comments, order confirmation via email, AI chatbot
+                            integration, and a chat channel between sellers and buyers.
+                          </li>
+                          <li>
+                            Using Laravel Framework, MySQL, and Bootstrap.
+                          </li>
+                          <a href="https://github.com/NgoTanLoi01" target="_blank"><i class="fab fa-github">
+                              code</i></a>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Prj2 -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">June 2024- Present
+                        </h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">TikTok UI</h4>
+                        <ul>
+                          <li>Recreate the user interface of the famous social network TikTok</li>
+                          <li>Features include recreating the main interfaces of the TikTok platform, using APIs to
+                            implement product and user search functions, video uploads, and user information management.
+                          </li>
+                          <li>
+                            Using React(.js)
+                          </li>
+                          <a href="https://github.com/NgoTanLoi01/tiktok-ui" target="_blank"><i class="fab fa-github">
+                              code</i></a>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Prj3 -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">Nov 2023 - Dec 2023
+                        </h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Fashion Website</h4>
+                        <ul>
+                          <li>A website specializing in fashion business.
+                          </li>
+                          <li>
+                            Designed a fashion business website with features such as electronic payments, sales
+                            statistics, order printing, and fashion product recommendations based on demand.
+                          </li>
+                          <li>
+                            Using Laravel Framework, MySQL, and Bootstrap.
+                          </li>
+                          <a href="https://github.com/NgoTanLoi01/FashionWebsite_Laravel" target="_blank"><i
+                              class="fab fa-github">
+                              code</i></a>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Prj4 -->
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">May 2022 - Jul 2022
+                        </h5>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Sales Management Software</h4>
+                        <ul>
+                          <li>Developed software to manage buying, selling, and importing goods, with features like
+                            employee and customer information management, product details, and warranty management.
+                          </li>
+                          <li>
+                            Aimed at creating an application to support sales management and reduce errors in the sales
+                            process.
+                          </li>
+                          <li>
+                            Using C#, WinForms, SQL Server.
+                          </li>
+                          <a href="https://github.com/NgoTanLoi01/Sales_management_software" target="_blank"><i
+                              class="fab fa-github">
+                              code</i></a>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div class="info_item">
-                     <div class="key">Start Date</div>
-                     <div class="value">11/2023- Present</div>
+                </div>
+
+                <!-- Skills & Certificates -->
+                <div class="col-xs-12 col-sm-3">
+                  <!-- Design Skills -->
+                  <div class="block-title">
+                    <h3>Coding <span>Skills</span></h3>
                   </div>
-                  <div class="info_item">
-                     <div class="key">Author</div>
-                     <div class="value"><a href="#">Ngo Tan Loi</a></div>
+
+                  <div class="skills-info skills-second-style">
+                    <!-- Skill 1 -->
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-file-code-fill" style="color:#04b4e0 ;"></i> HTML/CSS</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-file-code-fill" style="color:#04b4e0 ;"></i> JavaScript (React.js)</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-file-code-fill" style="color:#04b4e0 ;"></i> PHP (Laravel)</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-file-code-fill" style="color:#04b4e0 ;"></i> C# (WinForms)</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-file-code-fill" style="color:#04b4e0 ;"></i> SQL Server, MySQL</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-file-code-fill" style="color:#04b4e0 ;"></i> MongoDB
+                      </h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+
                   </div>
-                  <div class="info_item">
-                     <div class="key">Technology</div>
-                     <div class="value">Laravel Framework, MySQL, Bootstrap 4,...</div>
+                  <!-- End of Design Skills -->
+
+
+                  <!-- Coding Skills -->
+                  <div class="block-title">
+                    <h3>Tools/Software</h3>
                   </div>
-               </div>
+
+                  <div class="skills-info skills-second-style">
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-award-fill" style="color:#04b4e0 ;"></i> Postman</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-award-fill" style="color:#04b4e0 ;"></i> Docker</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-award-fill" style="color:#04b4e0 ;"></i> Linux</h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                    <div class="skill clearfix">
+                      <h4><i class="bi bi-award-fill" style="color:#04b4e0 ;"></i> Microsoft Office (Excel, Word,
+                        PowerPoint, Outlook)
+                      </h4>
+                      <div class="skill-value"></div>
+                    </div><br>
+                  </div>
+                  <!-- End of Coding Skills -->
+                  <!-- Knowledges -->
+                  <div class="block-title">
+                    <h3>Soft <span>Skills</span></h3>
+                  </div>
+
+                  <ul class="knowledges">
+                    <li>Problem-Solving Skills</li>
+                    <li>Logical Thinking</li>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Time Management</li>
+                    <li>Willingness to Learn</li>
+                    <li>Creative Thinking</li>
+                  </ul>
+                  <!-- End of Knowledges -->
+                </div>
+                <!-- End of Skills & Certificates -->
+              </div>
+
+              <div class="white-space-50"></div>
+            </div>
+          </section>
+          <!-- End of Resume Subpage -->
+          <!-- End of Portfolio Subpage -->
+          <!-- Contact Subpage -->
+          <section data-id="contact" class="animated-section">
+            <div class="page-title">
+              <h2>Contact</h2>
             </div>
 
-            <div class="portfolio_gallery owl-carousel">
-               <div class="gallery_item">
-                  <strong>Dashboard:</strong>
-                  <img src="assets/img/project/it-shop/thongke.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <strong>Product details:</strong>
-                  <img src="assets/img/project/it-shop/danhgiasanpham.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <strong>Order email:</strong>
-                  <img src="assets/img/project/it-shop/email.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <strong>Compare products:</strong>
-                  <img src="assets/img/project/it-shop/sosanhchitiet.png" alt="" />
-               </div>
-            </div>
+            <div class="section-content">
 
-            <div class="portfolio_description">
-               <h2 class="title">Project Description</h2>
-               <div class="desc">
-                  <p>This project is an e-commerce website focused on selling technology products such as laptops,
-                     mobile phones, smart wearables, headphones, and other accessories. The website is designed with a
-                     modern, user-friendly interface, making it easy for customers to search for and purchase products.
-                  </p>
-               </div>
-            </div>
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Functions</h4>
+              <div class="row">
+                <!-- Contact Info -->
+                <div class="col-xs-12 col-sm-4">
+                  <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-map-marker"></i>
+                    <h4>Ho Chi Minh City, Vietnam</h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
                   </div>
-                  <div class="story_content">
-                     <ul>
-                        <li>Login with google and facebook accounts</li>
-                        <li>Add, edit, delete categories, products, banners,...</li>
-                        <li>System decentralization</li>
-                        <li>Shopping cart, payment (VNPay, MoMo)</li>
-                        <li>Browse orders, print orders, send order confirmation Email</li>
-                        <li>Product details, product search</li>
-                        <li>Product suggestions</li>
-                        <li>Track orders, evaluate products after purchase</li>
-                        <li>Chat between sellers and buyers</li>
-                        <li>AI Chatbots</li>
-                        <li>Revenue and product statistics</li>
-                        <li>Compare products</li>
-                     </ul>
+
+                  <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-phone-handset"></i>
+                    <h4>033 712 0073</h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
                   </div>
-               </div>
-            </div>
 
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                     </div>
-                  </a>
-               </div>
+                  <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-envelope"></i>
+                    <h4><a href="mailto:ngotanloi2424@gmail.com" style="color: white;">ngotanloi2424@gmail.com</a></h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
+                  </div>
 
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
-               </div>
+                  <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-checkmark-circle"></i>
+                    <h4>Freelance Available</h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
+                  </div>
+
+
+                </div>
+                <!-- End of Contact Info -->
+
+                <!-- Contact Form -->
+                <div class="col-xs-12 col-sm-8">
+                  <div class="block-title">
+                    <h3>How Can I <span>Help You?</span></h3>
+                  </div>
+
+                  <form id="contact_form" class="contact-form"
+                    action="https://lmpixels.com/demo/breezycv/dark/1/contact_form/contact_form.php" method="post">
+
+                    <div class="messages"></div>
+
+                    <div class="controls two-columns">
+                      <div class="fields clearfix">
+                        <div class="left-column">
+                          <div class="form-group form-group-with-icon">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder=""
+                              required="required" data-error="Name is required.">
+                            <label>Full Name</label>
+                            <div class="form-control-border"></div>
+                            <div class="help-block with-errors"></div>
+                          </div>
+
+                          <div class="form-group form-group-with-icon">
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder=""
+                              required="required" data-error="Valid email is required.">
+                            <label>Email Address</label>
+                            <div class="form-control-border"></div>
+                            <div class="help-block with-errors"></div>
+                          </div>
+
+                          <div class="form-group form-group-with-icon">
+                            <input id="form_subject" type="text" name="subject" class="form-control" placeholder=""
+                              required="required" data-error="Subject is required.">
+                            <label>Subject</label>
+                            <div class="form-control-border"></div>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                        <div class="right-column">
+                          <div class="form-group form-group-with-icon">
+                            <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7"
+                              required="required" data-error="Please, leave me a message."></textarea>
+                            <label>Message</label>
+                            <div class="form-control-border"></div>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"
+                        data-theme="dark"></div>
+
+                      <input type="submit" class="button btn-send" value="Send message">
+                    </div>
+                  </form>
+                </div>
+                <!-- End of Contact Form -->
+              </div>
+
             </div>
-         </div>
+          </section>
+          <!-- End of Contact Subpage -->
+        </div>
       </div>
-      <!-- end: IT Equipment Shop -->
 
-      <!-- start: Fashion Website -->
-      <div id="portfolio-wrapper2" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="">
-            <img src="assets/img/project/fashion-shop/trangchu.png" style="width: 100%;" alt="" />
-         </div>
+    </div>
+  </div>
 
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Fashion Shop</h2>
-                  <div class="desc">
-                     <p>Website specializing in the field of fashion</p>
-                  </div>
-                  <a href="https://github.com/NgoTanLoi01/FashionWebsite_Laravel" class="btn tj-btn-primary">live
-                     preview <i class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Category</div>
-                     <div class="value">Web Design</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Start Date</div>
-                     <div class="value">01/12/2023 - 16/12/2023</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Author</div>
-                     <div class="value"><a href="#">Ngo Tan Loi</a></div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Technology</div>
-                     <div class="value">Laravel Framework, MySQL, Bootstrap 4,...</div>
-                  </div>
-               </div>
-            </div>
+  <script data-cfasync="false"
+    src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/animating.js"></script>
 
-            <div class="portfolio_gallery owl-carousel">
-               <div class="gallery_item">
-                  <strong>Dashboard:</strong>
-                  <img src="assets/img/project/fashion-shop/thongke.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <strong>Contact:</strong>
-                  <img src="assets/img/project/fashion-shop/lienhe.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <strong>Product details:</strong>
-                  <img src="assets/img/project/fashion-shop/chitiet.png" alt="" />
-               </div>
-            </div>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src='../../../../../www.google.com/recaptcha/api.js'></script>
 
-            <div class="portfolio_description">
-               <h2 class="title">Project Description</h2>
-               <div class="desc">
-                  <p>This project is an e-commerce website focusing on fashion and apparel. The website offers a wide
-                     range of clothing items for both men and women, including tops, bottoms, outerwear, and
-                     accessories. The design is modern and visually appealing, with high-quality images showcasing the
-                     products.</p>
-               </div>
-            </div>
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Functions</h4>
-                  </div>
-                  <div class="story_content">
-                     <ul>
-                        <li>Register, log in</li>
-                        <li>Add, edit, delete: Products, categories, banners,...</li>
-                        <li>Search product</li>
-                        <li>Filter products by price and brand</li>
-                        <li>Print orders and order details</li>
-                        <li>Product details, product descriptions,...</li>
-                        <li>Statistics on revenue, number of orders, products,...</li>
-                        <li>Product suggestions</li>
-                        <li>Electronic payment (VNPay)</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+  <script src='js/perfect-scrollbar.min.js'></script>
+  <script src='js/jquery.shuffle.min.js'></script>
+  <script src='js/masonry.pkgd.min.js'></script>
+  <script src='js/owl.carousel.min.js'></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
 
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end: Fashion Website -->
-
-      <!-- start: Javascript Ecommerce -->
-      <div id="portfolio-wrapper3" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class=" ">
-            <img src="assets/img/project/js-ecommerce/JS_Ecommerce.png" alt="" />
-         </div>
-
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">JS Ecommerce</h2>
-                  <div class="desc">
-                     <p>Use JavaScript to execute both frontend and backend projects.</p>
-                  </div>
-                  <a href="https://github.com/NgoTanLoi01/Javascript_Ecommerce" class="btn tj-btn-primary">live preview
-                     <i class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Category</div>
-                     <div class="value">Web Design</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Start Date</div>
-                     <div class="value">02/2024 - 04/2024</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Author</div>
-                     <div class="value"><a href="#">Ngo Tan Loi</a></div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Technology</div>
-                     <div class="value">HTML5, CSS, Bootstrap4, JavaScript</div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="portfolio_gallery owl-carousel">
-               <div class="gallery_item">
-                  <img src="assets/img/project/js-ecommerce/JS_Ecommerce.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <img src="assets/img/project/js-ecommerce/signup.png" alt="" />
-               </div>
-            </div>
-
-            <div class="portfolio_description">
-               <h2 class="title">Project Description</h2>
-               <div class="desc">
-                  <p>
-                     This project is a simple web application built entirely with JavaScript. The goal of the project is
-                     to create a product and user account management system, providing basic features such as
-                     registration, login, product category management, and product information management.</p>
-               </div>
-            </div>
-
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Functions</h4>
-                  </div>
-                  <div class="story_content">
-                     <ul>
-                        <li>Validate signup, login form according to the characters entered by the user</li>
-                        <li>Hide and show password</li>
-                        <li>Save account information to localStorage</li>
-                        <li>Validate product, category form</li>
-                        <li>CRUD, product, category into localStorage</li>
-                        <li>Get the category value for the product</li>
-                        <li>Get the value of product types and descriptions</li>
-                     </ul>
-                  </div>
-               </div>
-
-            </div>
-
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                        <h3 class="title">Sebastian</h3>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                        <h3 class="title">Qwillo</h3>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end: Javascript Ecommerce -->
-
-      <!-- start: Quiz App -->
-      <div id="portfolio-wrapper4" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="">
-            <img src="assets/img/project/quiz-app/index.png" style="width: 100%;" alt="" />
-         </div>
-
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Quiz App</h2>
-                  <div class="desc">
-                     <p>A quiz application built in Javascript language</p>
-                  </div>
-                  <a href="https://github.com/NgoTanLoi01/quiz-app" class="btn tj-btn-primary">live preview <i
-                        class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Category</div>
-                     <div class="value">App Design</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Start Date</div>
-                     <div class="value">03/05/2024 - 05/05/2024</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Author</div>
-                     <div class="value"><a href="#">Ngo Tan Loi</a></div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Technology</div>
-                     <div class="value">HTML, CSS, JavaScript</div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="portfolio_description">
-               <h2 class="title">Project Description</h2>
-               <div class="desc">
-                  <p>This is a simple quiz app built with HTML, CSS, and JavaScript. The app allows users to answer a
-                     series of questions and receive results upon completion.</p>
-               </div>
-            </div>
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Functions</h4>
-                  </div>
-                  <div class="story_content">
-                     <ul>
-                        <li>Display questions and options: The application displays a list of questions and
-                           corresponding options to the user.</li>
-                        <li>Calculate scores and display results: When the user completes all questions, the application
-                           calculates scores and displays the final results.</li>
-                        <li>Replay: Users can play the quiz again after completing it.</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end: Quiz App -->
-
-      <!-- start: Frontend Driving School Website-->
-      <div id="portfolio-wrapper5" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="">
-            <img src="assets/img/project/driving/driving.png" style="width: 100%;" alt="" />
-         </div>
-
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Driving School</h2>
-                  <div class="desc">
-                     <p>Website specializing in the field of fashion</p>
-                  </div>
-                  <a href="https://github.com/NgoTanLoi01/project_website_truonglai" class="btn tj-btn-primary">live
-                     preview <i class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Category</div>
-                     <div class="value">Web Design</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Start Date</div>
-                     <div class="value">21/02/2024 - 30/03/2024</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Author</div>
-                     <div class="value"><a href="#">Ngo Tan Loi</a></div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Technology</div>
-                     <div class="value">HTML, CSS, SCSS, JavaScript, Bootstrap 4</div>
-                  </div>
-               </div>
-            </div>
-            <div class="portfolio_description">
-               <h2 class="title">Project Description</h2>
-               <div class="desc">
-                  <p>The website interface is designed to be professional and modern, focusing on providing clear,
-                     accessible information and making a strong impression on potential students. The interface is
-                     user-friendly across all devices (computers, phones, tablets), ensuring a smooth and convenient
-                     browsing experience.</p>
-               </div>
-            </div>
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Functions</h4>
-                  </div>
-                  <div class="story_content">
-                     <ul>
-                        <li>A large banner showcasing featured courses, promotional programs, or professional driving training images.</li>
-                        <li>A brief introduction to the school, its mission, vision, and core values.</li>
-                        <li>Prominent call-to-action (CTA) buttons to encourage immediate registration.</li>
-                        <li>Detailed information about the school's history, teaching staff, facilities, and quality certifications.</li>
-                        <li>Real images of the school, classrooms, training vehicles, and training activities.</li>
-                        <li>A list of courses clearly categorized (motorcycles, scooters, cars of different classes).</li>
-                        <li>Detailed descriptions of each course: content, duration, tuition fees, schedule, and benefits.</li>
-                        <li>Online registration with a simple, easy-to-fill form.</li>
-                        <li>Updates on traffic laws, safe driving tips, and school events.</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end: Frontend Driving School Website-->
-
-      <!-- start: Sales Management Software -->
-      <div id="portfolio-wrapper6" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="">
-            <img src="assets/img/project/sales-management/Sales_management_software.png" style="width: 100%;" alt="" />
-         </div>
-
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Sales Management</h2>
-                  <div class="desc">
-                     <p>Built for the purpose of managing the sale and import of goods</p>
-                  </div>
-                  <a href="https://github.com/NgoTanLoi01/Sales_management_software" class="btn tj-btn-primary">live
-                     preview <i class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Category</div>
-                     <div class="value">App Design</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Start Date</div>
-                     <div class="value">06/2023 - 07/2023</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Author</div>
-                     <div class="value"><a href="#">Ngo Tan Loi</a></div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Technology</div>
-                     <div class="value">C#, Winform, SQLServer</div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="portfolio_gallery owl-carousel">
-               <div class="gallery_item">
-                  <img src="assets/img/project/sales-management/Sales_management_software_user.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <img src="assets/img/project/sales-management/Sales_management_software_product.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <img src="assets/img/project/sales-management/Sales_management_software_bill.png" alt="" />
-               </div>
-               <div class="gallery_item">
-                  <img src="assets/img/project/sales-management/Sales_management_software.png" alt="" />
-               </div>
-            </div>
-
-            <div class="portfolio_description">
-               <h2 class="title">Project Description</h2>
-               <div class="desc">
-                  <p>This project is a Windows Forms application developed using C# and SQL Server. It is designed to
-                     streamline and automate various aspects of sales management for a computer and electronics store.
-                     The software provides a comprehensive solution for managing customer and employee data,
-                     facilitating transactions between suppliers, the store, and customers, and handling product
-                     warranties.</p>
-               </div>
-            </div>
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Functions</h4>
-                  </div>
-                  <div class="story_content">
-                     <ul>
-                        <li>Employee Management: Store and manage employee information, including contact details,
-                           roles, and performance records.</li>
-                        <li>Product Management: Organize and categorize computer hardware and accessories, allowing for
-                           efficient inventory tracking.</li>
-                        <li>Purchasing: Facilitate the purchase of products from suppliers, including order placement,
-                           tracking, and invoice generation.</li>
-                        <li>Sales: Streamline the sales process to customers, generating invoices, receipts, and
-                           tracking payments.</li>
-                        <li>Warranty Tracking: Record warranty details for products sold, including duration, terms, and
-                           service history.</li>
-                        <li>Search Functionality: Enable quick and efficient searching of customer, product, and
-                           transaction data.</li>
-                        <li>Excel Export: Generate customizable Excel reports for sales analysis, inventory management,
-                           and performance tracking.</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                     </div>
-                  </a>
-               </div>
-
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end: Sales Management Software -->
-      <!-- =================================================================================================== -->
-      <!-- RESUME SECTION START -->
-      <section class="resume-section" id="resume-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="section-header wow fadeInUp" data-wow-delay=".3s">
-                     <h2 class="section-title"><i class="flaticon-recommendation"></i> My Experience</h2>
-                  </div>
-
-                  <div class="resume-widget">
-                     <div class="resume-item wow fadeInLeft" data-wow-delay=".4s">
-                        <div class="time">02/2024- 04/2024</div>
-                        <h3 class="resume-title">Nguyen Trinh private enterpris</h3>
-                        <div class="institute">
-                           <strong>Position:</strong> Frontend software development intern
-                        </div>
-                        <div class="institute">
-                           <strong>Responsibilities:</strong>
-                           <ul>
-                              <li>Developed the driving school website interface.</li>
-                              <li>Learned the process of developing a construction materials management website using
-                                 PHP
-                                 (Codeigniter Framework).
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-md-6">
-                  <div class="section-header wow fadeInUp" data-wow-delay=".4s">
-                     <h2 class="section-title"><i class="flaticon-graduation-cap"></i> My Education</h2>
-                  </div>
-
-                  <div class="resume-widget">
-                     <div class="resume-item wow fadeInRight" data-wow-delay=".5s">
-                        <div class="time">2020 – 2024</div>
-                        <h3 class="resume-title">TRA VINH UNIVERSITY</h3>
-                        <div class="institute"><strong>Major:</strong> Website, Mobile Programming (Level - Good)</div>
-                        <div class="institute"><strong>Achievement:</strong> Academic scholarship for excellent
-                           performance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- RESUME SECTION END -->
-
-      <!-- SKILLS SECTION START -->
-      <section class="skills-section" id="skills-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="section-header text-center">
-                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Skills</h2>
-                     <!-- <p class="wow fadeInUp" data-wow-delay=".4s">
-                        We put your ideas and thus your wishes in the form of a unique web project that inspires you and
-                        you customers.
-                     </p> -->
-                  </div>
-               </div>
-            </div>
-
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
-                        <div class="skill-inner">
-                           <div class="icon-box">
-                              <img src="assets/img/icons/laravel.svg" alt="" />
-                           </div>
-                           <div class="number">92%</div>
-                        </div>
-                        <p>Laravel</p>
-                     </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
-                        <div class="skill-inner">
-                           <div class="icon-box">
-                              <img src="assets/img/icons/mysql.svg" alt="" />
-                           </div>
-                           <div class="number">92%</div>
-                        </div>
-                        <p>MySQL</p>
-                     </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
-                        <div class="skill-inner">
-                           <div class="icon-box">
-                              <img src="assets/img/icons/ai.svg" alt="" />
-                           </div>
-                           <div class="number">85%</div>
-                        </div>
-                        <p>AI</p>
-                     </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
-                        <div class="skill-inner">
-                           <div class="icon-box">
-                              <img src="assets/img/icons/github.svg" alt="" />
-                           </div>
-                           <div class="number">93%</div>
-                        </div>
-                        <p>Github</p>
-                     </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                        <div class="skill-inner">
-                           <div class="icon-box">
-                              <img src="assets/img/icons/react.svg" alt="" />
-                           </div>
-                           <div class="number">89%</div>
-                        </div>
-                        <p>React</p>
-                     </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
-                        <div class="skill-inner">
-                           <div class="icon-box">
-                              <img src="assets/img/icons/js.svg" alt="" />
-                           </div>
-                           <div class="number">93%</div>
-                        </div>
-                        <p>JavaScript</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- SKILLS SECTION END -->
-
-      <!-- CONTACT SECTION START -->
-      <section class="contact-section" id="contact-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-6 col-md-7 order-2 order-md-1">
-                  <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
-                     <div class="section-header">
-                        <h2 class="section-title">Let’s work together!</h2>
-                        <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
-                     </div>
-
-                     <div class="tj-contact-form">
-                        <form id="contact-form">
-                           <div class="row gx-3">
-                              <div class="col-sm-6">
-                                 <div class="form_group">
-                                    <input type="text" name="conName" id="conName" placeholder="First name"
-                                       autocomplete="off" />
-                                 </div>
-                              </div>
-                              <div class="col-sm-6">
-                                 <div class="form_group">
-                                    <input type="text" name="conLName" id="conLName" placeholder="Last name"
-                                       autocomplete="off" />
-                                 </div>
-                              </div>
-                              <div class="col-sm-6">
-                                 <div class="form_group">
-                                    <input type="email" name="conEmail" id="conEmail" placeholder="Email address"
-                                       autocomplete="off" />
-                                 </div>
-                              </div>
-                              <div class="col-sm-6">
-                                 <div class="form_group">
-                                    <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number"
-                                       autocomplete="off" />
-                                 </div>
-                              </div>
-                              <div class="col-12">
-                                 <div class="form_group">
-                                    <select name="conService" id="conService" class="tj-nice-select">
-                                       <option value="" selected disabled>Choose Service</option>
-                                       <option value="braning">Branding Design</option>
-                                       <option value="web">Web Design</option>
-                                       <option value="uxui">UI/UX Design</option>
-                                       <option value="app">App Design</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              <div class="col-12">
-                                 <div class="form_group">
-                                    <textarea name="conMessage" id="conMessage" placeholder="Message"></textarea>
-                                 </div>
-                              </div>
-                              <div class="col-12">
-                                 <div class="form_btn">
-                                    <button type="submit" class="btn tj-btn-primary">Send Message</button>
-                                 </div>
-                              </div>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-lg-5 offset-lg-1 col-md-5 d-flex flex-wrap align-items-center order-1 order-md-2">
-                  <div class="contact-info-list">
-                     <ul class="ul-reset">
-                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
-                           data-wow-delay=".4s">
-                           <div class="icon-box">
-                              <i class="flaticon-phone-call"></i>
-                           </div>
-                           <div class="text-box">
-                              <p>Phone</p>
-                              <a href="tel:0337120073">+84 337120073</a>
-                           </div>
-                        </li>
-                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
-                           data-wow-delay=".5s">
-                           <div class="icon-box">
-                              <i class="flaticon-mail-inbox-app"></i>
-                           </div>
-                           <div class="text-box">
-                              <p>Email</p>
-                              <a href="mailto:ngotanloi2424@gmail.com">ngotanloi2424@gmail.com</a>
-                           </div>
-                        </li>
-                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
-                           data-wow-delay=".6s">
-                           <div class="icon-box">
-                              <i class="flaticon-location"></i>
-                           </div>
-                           <div class="text-box">
-                              <p>Address</p>
-                              <a href="#">Tra Vinh City, Viet Nam</a>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- CONTACT SECTION END -->
-
-      <!-- BEGIN: Contact Form Success Modal Message -->
-      <div class="modal contact_modal" id="message_sent" tabindex="-1">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <span class="modal-title"><strong>Message Sent Successfully</strong></span>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fas fa-times"></i></button>
-               </div>
-               <div class="modal-body">
-                  <p>Thank you for contacting us. We will get back to you shortly.<br />Have a great day!</p>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- END: Contact Form Success Modal Message -->
-
-      <!-- BEGIN: Contact Form Fail Modal Message -->
-      <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <span class="modal-title"><strong>Error</strong></span>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fas fa-times"></i></button>
-               </div>
-               <div class="modal-body">
-                  <p>Oops! Something went wrong, please try again.</p>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- END: Contact Form Fail Modal Message End -->
-   </main>
-
-   <!-- FOOTER AREA START -->
-   <footer class="tj-footer-area">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12 text-center">
-               <div class="footer-logo-box">
-                  <a href="#"><img src="assets/img/logo/logo-dark.png" alt="" /></a>
-               </div>
-               <div class="footer-menu">
-                  <nav>
-                     <ul>
-                        <li><a href="#services-section">Home</a></li>
-                        <li><a href="#works-section">Project</a></li>
-                        <li><a href="#resume-section">Resume</a></li>
-                        <li><a href="#skills-section">Skills</a></li>
-                        <!-- <li><a href="#testimonials-section">Testimonials</a></li> -->
-                        <li><a href="#contact-section">Contact</a></li>
-                     </ul>
-                  </nav>
-               </div>
-               <div class="copy-text">
-                  <p>&copy; 2024 <a href="#" target="_blank">NgoTanLoi</a></p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
-   <!-- FOOTER AREA END -->
-
-   <!-- CSS here -->
-   <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/bootstrap.bundle.min.js"></script>
-   <script src="assets/js/nice-select.min.js"></script>
-   <script src="assets/js/backToTop.js"></script>
-   <script src="assets/js/smooth-scroll.js"></script>
-   <script src="assets/js/appear.min.js"></script>
-   <script src="assets/js/wow.min.js"></script>
-   <script src="assets/js/gsap.min.js"></script>
-   <script src="assets/js/one-page-nav.js"></script>
-   <script src="assets/js/lightcase.js"></script>
-   <script src="assets/js/owl.carousel.min.js"></script>
-   <script src="assets/js/swiper.min.js"></script>
-   <script src="assets/js/imagesloaded-pkgd.js"></script>
-   <script src="assets/js/isotope.pkgd.min.js"></script>
-   <script src="assets/js/odometer.min.js"></script>
-   <script src="assets/js/magnific-popup.js"></script>
-   <script src="assets/js/validate.min.js"></script>
-   <script src="assets/js/main.js"></script>
+  <script src="js/validator.js"></script>
+  <script src="js/main.js"></script>
+  <script defer
+    src="../../../../../static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"rayId":"8b9106b9dd36496f","version":"2024.8.0","r":1,"serverTiming":{"name":{"cfL4":true}},"token":"94b99c0576dc45bf9d669fb5e9256829","b":1}'
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
